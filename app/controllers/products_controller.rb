@@ -6,11 +6,11 @@ class ProductsController < ApplicationController
   def index
     @products = Product.all
    
-    @mumbai_ware_houses = get_warehouse_by_name("Mumbai") 
-    @delhi_ware_houses = get_warehouse_by_name("New Delhi") 
-    @bangalore_ware_houses = get_warehouse_by_name("Bangalore") 
+    #@mumbai_ware_houses = get_warehouse_by_name("Mumbai") 
+    #@delhi_ware_houses = get_warehouse_by_name("New Delhi") 
+    #@bangalore_ware_houses = get_warehouse_by_name("Bangalore") 
 
-    
+
 
   end
 
