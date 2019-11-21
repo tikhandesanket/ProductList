@@ -14,7 +14,7 @@
 	mgf_date = Date.today - rand(1**10).to_i.days
 
 	product = Product.create(sku_code: sku_code, name: name, desciption: desciption, mgf_date: mgf_date)
-	p "--------Record : #{product.errors.messages}"
+	#p "--------Record : #{product.errors.messages}"
 end
 
 
@@ -23,19 +23,19 @@ end
 	wh_code = rand(36**10).to_s(36)
 	name = ['Mumbai', 'New Delhi','Bangalore'].sample
 	pincode = rand(15**5)
-	product_count =rand(-10)
-	max_capcity = rand(-20)
-	
+	product_count = rand(-10)
+	max_capacity = rand(10..20)
+	min_capacity = rand(2..9)
 
 	warehouse = Warehouse.create(wh_code: wh_code, name: name, pincode: pincode, max_capcity: max_capcity, product_count: product_count)
-	p "------Record : #{warehouse.name}"
+	#p "------Record : #{warehouse.name}"
 end
 
 
 
 #mumbai_warehouse = Warehouse.find_by(name: "Mumbai")
 
-#puma_products = Product.find_by(name: "Puma")
+#puma_products = Product.where(:name => 'Puma')
 
 
 

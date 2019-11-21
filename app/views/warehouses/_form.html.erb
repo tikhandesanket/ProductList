@@ -16,24 +16,23 @@
     <%= form.text_field :name %>
   </div>
 
-  <div class="field">
-    <%= form.label :pincode %>
-    <%= form.text_field :pincode %>
-  </div>
-
+  <!--<div class="field">-->
+    <%#= form.label :pincode %>
+    <%#= form.text_field :pincode %>
+  <!--</div>>-->
   <div >
     <%= form.label :wh_code %>
     <%= form.text_field :wh_code %>
   </div>
 
   <div >
-    <%= form.label :max_capcity %>
-    <%= form.text_field :max_capcity %>
+    <%= form.label :max_capacity %>
+    <%= form.text_field :max_capacity %>
   </div>
   
  <div class="field">
-    <%= form.label :product_count %>
-    <%= form.text_field :product_count %>
+    <%= form.label :min_capacity %>
+    <%= form.text_field :min_capacity ,input_html: { min: '0', step: 'any' }%>
   </div>
 
   <div class="actions">

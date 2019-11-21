@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_11_20_124950) do
+ActiveRecord::Schema.define(version: 2019_11_21_144846) do
 
   create_table "products", force: :cascade do |t|
     t.integer "warehouse_id"
@@ -33,11 +33,11 @@ ActiveRecord::Schema.define(version: 2019_11_20_124950) do
     t.string "wh_code"
     t.string "name"
     t.integer "pincode"
-    t.integer "max_capcity"
+    t.integer "max_capacity"
     t.integer "product_count"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
-    t.integer "min_capcity"
+    t.integer "min_capacity"
   end
 
 end

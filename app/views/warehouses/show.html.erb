@@ -1,10 +1,9 @@
 <p id="notice"><%= notice %></p>
 
-<div class="row">
-  <div class="form-group">
+  <p>
     <strong>Name:</strong>
     <%= @warehouse.name %>
-  </div>
+  </p>
 
   <p>
     <strong>Pin-Code:</strong>
@@ -18,13 +17,14 @@
 
   <p>
     <strong>Max Capacity:</strong>
-    <%= @warehouse.max_capcity %>
+    <%= @warehouse.max_capacity %>
   </p>
 
   <p>
-    <strong>Product Count:</strong>
-    <%= @warehouse.product_count %>
+    <strong>Min Capacity:</strong>
+    <%= @warehouse.min_capacity %>
   </p>
-</div>
-<%= link_to 'Edit', edit_warehouse_path(@warehouse) %> |
-<%= link_to 'Back', warehouses_path %>
+
+
+<%#= link_to 'Edit', edit_warehouse_path(@warehouse) %> 
+<%= link_to 'Back', products_path %>

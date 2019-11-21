@@ -4,14 +4,8 @@ class ProductsController < ApplicationController
   # GET /products
   # GET /products.json
   def index
-    @products = Product.all
-   
-    #@mumbai_ware_houses = get_warehouse_by_name("Mumbai") 
-    #@delhi_ware_houses = get_warehouse_by_name("New Delhi") 
-    #@bangalore_ware_houses = get_warehouse_by_name("Bangalore") 
-
-
-
+    @products = Product.all.order('id DESC').paginate(page: params[:page], per_page: 20 )
+    @warehouse_name =  Warehouse.all.collect(&:name).uniq
   end
 
   # GET /products/1

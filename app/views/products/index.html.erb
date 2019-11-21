@@ -20,21 +20,22 @@
 <%= link_to 'New Product', new_product_path, class: 'btn btn-success'%>&nbsp;&nbsp;
 
 <%= link_to 'New Warehouse', new_warehouse_path, class: 'btn btn-success'%>
+    
     <% @products.each do |product| %>
+    <% storage_details = product.get_number_of_product_from_ware_house%>
       <tr>
         
-        <td><%= link_to product.sku_code , {:action => 'show', :id => product.sku_code} %></td>
+        <td><%= link_to product.sku_code , {:action => 'show', :id => product.sku_code} %></td> 
         <td><%= product.name %></td>
-        <td><%#= product.desciption %></td>
-        <td><%#= product.mgf_date %></td>
-        <td><%#= product.mgf_date %></td>
+        <td class="<%= storage_details["mumbai"].to_i < storage_details['mumbaimin_capacity'].to_i ? 'alert alert-danger' : '' %>" ><%= storage_details["mumbai"] %></td>
 
+        <td class="<%= storage_details["delhi"].to_i < storage_details['delhimain_capacity'].to_i ? 'alert alert-danger' : '' %>" ><%= storage_details["delhi"] %></td>
         
+        <td class="<%= storage_details["bangalore"].to_i < storage_details['bangaloremin_capacity'].to_i ? 'alert alert-danger' : '' %>" ><%= storage_details["bangalore"] %></td>
         <td><%= link_to 'Edit', edit_product_path(product) %></td>
-
       </tr>
     <% end %>
   </tbody>
 </table>
-
+ <%= will_paginate @products, renderer: BootstrapPagination::Rails %>
 <br>
