@@ -11,11 +11,15 @@
       <th>New Delhi Ware-House</th>
       <th>Bangalore Ware-House</th>
       <th>Action</th>
-      <th colspan="1"></th>
+     
     </tr>
   </thead>
 
   <tbody>
+  
+<%= link_to 'New Product', new_product_path, class: 'btn btn-success'%>&nbsp;&nbsp;
+
+<%= link_to 'New Warehouse', new_warehouse_path, class: 'btn btn-success'%>
     <% @products.each do |product| %>
       <tr>
         
@@ -27,12 +31,10 @@
 
         
         <td><%= link_to 'Edit', edit_product_path(product) %></td>
-      
+
       </tr>
     <% end %>
   </tbody>
 </table>
 
 <br>
-
-<%= link_to 'New Product', new_product_path, class: 'btn btn-success'%>

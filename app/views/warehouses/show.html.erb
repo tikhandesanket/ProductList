@@ -1,29 +1,30 @@
 <p id="notice"><%= notice %></p>
 
-<p>
-  <strong>Name:</strong>
-  <%= @warehouse.name %>
-</p>
+<div class="row">
+  <div class="form-group">
+    <strong>Name:</strong>
+    <%= @warehouse.name %>
+  </div>
 
-<p>
-  <strong>Pin-Code:</strong>
-  <%= @warehouse.pincode %>
-</p>
+  <p>
+    <strong>Pin-Code:</strong>
+    <%= @warehouse.pincode %>
+  </p>
 
-<p>
-  <strong>Ware House Code:</strong>
-  <%= @warehouse.wh_code %>
-</p>
+  <p>
+    <strong>Ware House Code:</strong>
+    <%= @warehouse.wh_code %>
+  </p>
 
-<p>
-  <strong>Max Capacity:</strong>
-  <%= @warehouse.max_capcity %>
-</p>
+  <p>
+    <strong>Max Capacity:</strong>
+    <%= @warehouse.max_capcity %>
+  </p>
 
-<p>
-  <strong>Product Count:</strong>
-  <%= @warehouse.product_count %>
-</p>
-
+  <p>
+    <strong>Product Count:</strong>
+    <%= @warehouse.product_count %>
+  </p>
+</div>
 <%= link_to 'Edit', edit_warehouse_path(@warehouse) %> |
 <%= link_to 'Back', warehouses_path %>

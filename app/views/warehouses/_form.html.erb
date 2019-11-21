@@ -10,7 +10,7 @@
       </ul>
     </div>
   <% end %>
-
+ <div class="form-group">
   <div class="field">
     <%= form.label :name %>
     <%= form.text_field :name %>
@@ -21,12 +21,12 @@
     <%= form.text_field :pincode %>
   </div>
 
-  <div class="field">
+  <div >
     <%= form.label :wh_code %>
     <%= form.text_field :wh_code %>
   </div>
 
-  <div class="field">
+  <div >
     <%= form.label :max_capcity %>
     <%= form.text_field :max_capcity %>
   </div>
@@ -39,4 +39,5 @@
   <div class="actions">
     <%= form.submit %>
   </div>
+</div>
 <% end %>
