@@ -21,7 +21,7 @@ end
 3.times do
 
 	wh_code = rand(36**10).to_s(36)
-	name = ['Mumbai', 'New Delhi','Bangalore'].sample
+	name = ['Mumbai', 'NewDelhi','Bangalore'].sample
 	pincode = rand(15**5)
 	product_count = rand(-10)
 	max_capacity = rand(10..20)

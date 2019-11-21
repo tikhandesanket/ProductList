@@ -14,7 +14,7 @@ class Product < ApplicationRecord
 				storage_details[warehouse_name.downcase+'min_capacity']= ware_house.min_capacity
 				storage_details[warehouse_name.downcase] = ware_house.products.collect(&:name).count(self.name) if ware_house
 			end
-		#p "-----------------#{storage_details}"
+		p "-----------------#{storage_details}"
 		return storage_details
   end	
 
