@@ -14,7 +14,7 @@
 	mgf_date = Date.today - rand(1**10).to_i.days
 
 	product = Product.create(sku_code: sku_code, name: name, desciption: desciption, mgf_date: mgf_date)
-	#p "--------Record : #{product.errors.messages}"
+	p "--------Record : #{product.errors.messages}"
 end
 
 
@@ -27,20 +27,21 @@ end
 	max_capacity = rand(10..20)
 	min_capacity = rand(2..9)
 
-	warehouse = Warehouse.create(wh_code: wh_code, name: name, pincode: pincode, max_capcity: max_capcity, product_count: product_count)
-	#p "------Record : #{warehouse.name}"
+	warehouse = Warehouse.create(wh_code: wh_code, name: name, pincode: pincode, max_capacity: max_capacity, product_count: product_count, min_capacity: min_capacity)
+	p "------Record : #{warehouse.name}"
 end
 
+ware_house = Warehouse.find_or_create_by(name: "Mumbai")
+all_ware_houses = Warehouse.find_by(:name => "Mumbai")
+
+product = Product.find_or_create_by(:name => "Puma")
+all_products = Product.where(:name => "Puma")
 
 
-#mumbai_warehouse = Warehouse.find_by(name: "Mumbai")
-
-#puma_products = Product.where(:name => 'Puma')
-
+product.warehouses << all_ware_houses if product and all_ware_houses
+ware_house.products << all_products if ware_house and all_products
 
 
- #puma_products.warehouses << mumbai_warehouse
+
+
  
- #mumbai_warehouse.products << puma_products
-
- #p "----here is the total count of mumbai warehouse#{mumbai_warehouse.products.count}"
