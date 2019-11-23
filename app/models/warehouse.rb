@@ -6,5 +6,10 @@ class Warehouse < ApplicationRecord
 
 end
 
+def increment_product_counter
+end
+
+def decrement_product_counter
+end
 
  
