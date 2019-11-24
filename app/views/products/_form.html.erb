@@ -33,9 +33,9 @@
   </div>
 
   <% Warehouse.all.each do |warehouse| %>
-    <%= check_box_tag "product[warehouse_ids][]", warehouse.id, product.warehouse_ids.include?(warehouse.id), id: dom_id(warehouse) %>
-    <%= label_tag dom_id(warehouse), warehouse.name %><br/>
-  <% end %>
+  <%= check_box_tag "product[warehouse_ids][]", warehouse.id, product.warehouse_ids.include?(warehouse.id), id: dom_id(warehouse) %>
+  <%= label_tag dom_id(warehouse), warehouse.name %><br/>
+<% end %>
 
   <div class="actions">
     <%= form.submit %>
